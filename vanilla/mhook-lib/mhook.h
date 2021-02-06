@@ -24,5 +24,14 @@
 #define _M_IX86_X64
 #endif
 
+struct HOOK_INFO
+{
+    PVOID *ppSystemFunction;    // pointer to pointer to function to be hooked
+    PVOID pHookFunction;        // hook function
+};
+
+// returns number of successfully set hooks
+int Mhook_SetHookEx(HOOK_INFO* hooks, int hookCount);
 BOOL Mhook_SetHook(PVOID *ppSystemFunction, PVOID pHookFunction);
+int Mhook_UnhookEx(PVOID** hooks, int hookCount);
 BOOL Mhook_Unhook(PVOID *ppHookedFunction);

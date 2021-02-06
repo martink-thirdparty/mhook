@@ -4,10 +4,11 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#pragma pack(push,1)
 
 #include <windows.h>
 #include "misc.h"
+
+#pragma pack(push,1)
 
 ////////////////////////////////////////////////////////
 // System descriptors
@@ -107,7 +108,7 @@ typedef struct _DESCRIPTOR_ENTRY
     UCHAR   Type : 4;        // 10EWA (code), E=ExpandDown, W=Writable, A=Accessed
                              // 11CRA (data), C=Conforming, R=Readable, A=Accessed
     UCHAR   System : 1;      // if 1 then it is a gate or LDT
-    UCHAR   DPL : 2;         // descriptor privilege level; 
+    UCHAR   DPL : 2;         // descriptor privilege level;
                              // for data selectors, MAX(CPL, RPL) must be <= DPL to access (or else GP# fault)
                              // for non-conforming code selectors (without callgate), MAX(CPL, RPL) must be <= DPL to access (or else GP# fault)
                              // for conforming code selectors, MAX(CPL, RPL) must be >= DPL (i.e., CPL 0-2 cannot access if DPL is 3)
@@ -160,17 +161,17 @@ typedef struct _PTE_ENTRY
 // TODO: update for X64
 typedef struct _PDE_ENTRY
 {
-	ULONG Present : 1;
-	ULONG Write : 1;
-	ULONG Owner : 1;
-	ULONG WriteThrough : 1;
-	ULONG CacheDisable : 1;
-	ULONG Accessed : 1;
-	ULONG Reserved1 : 1;
-	ULONG PageSize : 1;
-	ULONG Global : 1;
-	ULONG Reserved : 3;
-	ULONG Address : 20;
+    ULONG Present : 1;
+    ULONG Write : 1;
+    ULONG Owner : 1;
+    ULONG WriteThrough : 1;
+    ULONG CacheDisable : 1;
+    ULONG Accessed : 1;
+    ULONG Reserved1 : 1;
+    ULONG PageSize : 1;
+    ULONG Global : 1;
+    ULONG Reserved : 3;
+    ULONG Address : 20;
 } PDE_ENTRY;
 
 // TODO: update for X64
