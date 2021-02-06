@@ -19,19 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\disasm-lib\cpu.c" />
-    <ClCompile Include="source\disasm-lib\disasm.c" />
-    <ClCompile Include="source\disasm-lib\disasm_x86.c" />
-    <ClCompile Include="source\disasm-lib\misc.c" />
-    <ClCompile Include="source\mhook-lib\mhook.cpp" />
+    <ClCompile Include="vanilla\disasm-lib\cpu.c" />
+    <ClCompile Include="vanilla\disasm-lib\disasm.c" />
+    <ClCompile Include="vanilla\disasm-lib\disasm_x86.c" />
+    <ClCompile Include="vanilla\disasm-lib\misc.c" />
+    <ClCompile Include="vanilla\mhook-lib\mhook.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\disasm-lib\cpu.h" />
-    <ClInclude Include="source\disasm-lib\disasm.h" />
-    <ClInclude Include="source\disasm-lib\disasm_x86.h" />
-    <ClInclude Include="source\disasm-lib\disasm_x86_tables.h" />
-    <ClInclude Include="source\disasm-lib\misc.h" />
-    <ClInclude Include="source\mhook-lib\mhook.h" />
+    <ClInclude Include="vanilla\disasm-lib\cpu.h" />
+    <ClInclude Include="vanilla\disasm-lib\disasm.h" />
+    <ClInclude Include="vanilla\disasm-lib\disasm_x86.h" />
+    <ClInclude Include="vanilla\disasm-lib\disasm_x86_tables.h" />
+    <ClInclude Include="vanilla\disasm-lib\misc.h" />
+    <ClInclude Include="vanilla\mhook-lib\mhook.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A4D59A1F-45A4-4824-A59A-1E573ECB1ABE}</ProjectGuid>
